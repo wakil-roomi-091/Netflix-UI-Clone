@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.martel-sans-bold {
+  font-family: "Martel Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+@media (max-width: 768px) {
+  .main nav {
+    max-width: 90vw;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .mainlabel {
+    gap: 16px;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .mainlabel .heading {
+    font-size: 2rem;
+  }
+  .mainlabel .subheading {
+    font-size: 1rem;
+  }
+  .main nav img {
+    max-width: 120px;
+  }
+}
+body{
+    background-color: black;
+}
+.main{
+    background-image: url("../assets/images/background.jpg");
+    height: 90vh;
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+   
+
+}
+.main nav {
+    /* border: 2px solid white; */
+    max-width: 65vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    top: 10px;
+    
+}
+.main nav img{
+width: 145px;
+z-index: 10;
+    position: relative;
+    margin-top: 20px;
+    width: clamp(100px, 15vw, 145px);
+
+}
+.main nav button{
+/* padding: 10px 20px; */
+z-index: 10;
+    position: relative;
+    padding: 5px 15px;
+    background-color: red;
+    border: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+     margin-top: 20px;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        background-color: rgba(255, 0, 0, 0.714);
+    }
+}
+.main .box{
+    height: 90vh;
+    width: 100%;
+    opacity: 0.74;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+.mainlabel{
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    padding: 0 30px;
+    gap: 24px;  
+}
+.mainlabel .heading{
+font-family: "Martel Sans", sans-serif;
+  font-weight: 900;
+  /* font-size: 64px; */
+  text-align: center;
+   font-size: clamp(2rem, 6vw, 4rem);
+}
+.mainlabel .subheading{
+    font-family: "Martel Sans", sans-serif;
+  font-weight: 500;
+ /* font-size: 20px; */
+ text-align: center;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+.mainlabel .intro{
+    font-family: "Martel Sans", sans-serif;
+  font-weight: 400;
+ /* font-size: 16px; */
+ text-align: center;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+.mainlabel .registeration button{
+     font-family: "Martel Sans", sans-serif;
+  font-weight: 900;
+   padding: 10px 30px;
+    background-color: red;
+    border: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        background-color: rgba(255, 0, 0, 0.714);
+    }
+}
+.registeration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.mainlabel .registeration input{
+     font-family: "Martel Sans", sans-serif;
+  /* font-weight: 400; */
+     padding:  14px ;
+     border-radius: 3px;
+     background-color: rgba(10, 10, 10, 0.298);
+     /* background-color: transparent; */
+     border: 1px solid rgba(255, 255, 255, 0.397);
+     width: 400px;
+     color: rgb(255, 255, 255);
+     font-size: 14px;
+     transition: 0.3s ease-in;
+     &::after{
+          padding: 0px 14px 25px 14px;
+     }
+}
+
+.finishline{
+height: 5px;
+background-color: rgb(77, 75, 75);
+opacity: 0.50;
+}
+.movies{
+  /* border: 2px solid white; */
+  margin: auto;
+  width: 70vw;
+}
+.movies .moviebox{
+    display: flex;
+    flex-direction: column;
+  /* justify-content: center;  */
+  align-items: center;
+  color: white;
+  /* border: 2px solid white; */
+  margin-top: 90px;
+  gap: 20px;
+  
+}
+.movies .moviebox .trending{
+  width: 70vw;
+  display: flex;
+  justify-content: start;
+ 
+}
+.movies .moviebox .trending h1{
+  font-size: 30px;
+  font-weight: bold;
+}
+.movie-pics{
+  display: flex;
+  /* border: 2px solid white; */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  width: 70vw;
+}
+.movie-pics::-webkit-scrollbar{
+  display: none;
+}
+.movie-pics img{
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover{
+    transform: scale(1.06);
+  }
+}
+.reasons{
+  color: white;
+  /* border: 2px solid green; */
+  width: 70vw;
+ margin: auto;
+ margin-top: 50px;
+}
+.more-reasons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+}
+.more-reasons .heading {
+  display: flex;
+  /* border: 2px solid ; */
+  width: 70vw;
+}
+.more-reasons .heading h1{
+   font-size: 30px;
+  font-weight: bold;
+}
+.more-reasons .reason{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* border: 2px solid peru; */
+  margin-top: 15px;
+  width: 70vw;
+  /* padding: 20px; */
+}
+.reason span{
+  border: none;
+  background: linear-gradient(135deg, #989ef050 0%, #4c2b8488 40%, #f070b02e );
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* text-align: center; */
+  width: 400px;
+  border-radius: 12px;
+  padding: 20px;
+  gap: 20px;
+  
+}
+.reason span h2{
+  font-weight: 600;
+  font-size: 20px;
+  
+}
+.reason span p{
+  font-size: 14px;
+  font-weight: normal;
+}
+.questions{
+  color: white;
+  width: 70vw;
+  /* border: 2px solid pink; */
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+.fq-questions .heading h1{
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.question{
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.question span{
+  border: none;
+  padding: 25px;
+  background-color: rgba(227, 225, 225, 0.206);
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:hover{
+    background-color: rgba(128, 128, 128, 0.652);
+  }
+}
+.footer{
+  width: 70vw;
+  /* border: 2px solid white; */
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+.footer .registeration{
+  width: 70vw;
+  /* border: 2px solid white; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.registeration .registeration-label p{
+  font-size: 14px;
+  font-weight: 500;
+}
+.registeration .btn-placeholder{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.registeration .btn-placeholder input{
+    padding:  14px ;
+     border-radius: 3px;
+     background-color: rgba(10, 10, 10, 0.298);
+     /* background-color: transparent; */
+     border: 1px solid rgba(255, 255, 255, 0.397);
+     width: 400px;
+     color: rgb(255, 255, 255);
+     font-size: 14px;
+     transition: 0.3s ease-in;
+     &::after{
+          padding: 0px 14px 25px 14px;
+     }
+
+}
+
+.registeration .btn-placeholder button{
+   font-weight: 900;
+   padding: 10px 30px;
+    background-color: red;
+    border: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        background-color: rgba(255, 0, 0, 0.714);
+    }
+}
+.contact-tags{
+  width: 70vw;
+  /* border: 2px solid white; */
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+.contact-tags .contact{
+/* border: 2px solid green; */
+}
+.contact-tags .contact a{
+  text-decoration: none;
+  text-decoration: underline;
+  color: white;
+}
+.tags {
+  /* border: 2px solid orange; */
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 40px;
+  max-width: 70vw; 
+}
+
+.tags a {
+color: white;
+  padding: 8px;
+  font-size: 12px;
+
+}
+.language-option{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.language-option label{
+  display: none;
+}
+.language-option select{
+  background-color: transparent;
+  color: white;
+  padding: 5px 15px 5px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.679);
+  border-radius: 5px;
+  width: 100px;
+}
+.netflix-pak{
+  color: white;
+  margin-top: 50px;
+  font-weight: 500;
+}
+.copyright{
+  color: white;
+  margin-top: 50px;
+   margin-bottom: 100px;
+}
+.copyright p{
+  font-size: 12px;
+  font-weight: normal;
+}
+.copyright p a{
+  color: rgb(34, 138, 235);
+ 
+}
